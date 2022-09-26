@@ -20,8 +20,8 @@ class Pez(Animal):
         return"nadar"
     
     @classmethod
-    def crearSalmon(cls,nombre,edad,genero,zona):
-        salmon=cls(nombre,edad,"oceano",genero,zona,"rojo",6)
+    def crearSalmon(cls,nombre,edad,genero,_):
+        salmon=cls(nombre,edad,"oceano",genero,_,"rojo",6)
         cls._listado.append(salmon)
         cls.salmones+=1
         return salmon

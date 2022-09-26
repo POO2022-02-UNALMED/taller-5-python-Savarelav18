@@ -13,7 +13,7 @@ class Anfibio(Animal):
     
     @classmethod
     def cantidadAnfibios(cls):
-            return len(cls._listado)
+        return len(cls._listado)
     
     def movimiento():
         return "saltar"
@@ -25,7 +25,7 @@ class Anfibio(Animal):
 
     @classmethod
     def crearSalamandra(cls,nombre,edad,genero):
-        cls.ranas+=1
+        cls.salamandras+=1
         return cls(nombre,edad,"selva",genero,"negro y amarillo",False)
     
 

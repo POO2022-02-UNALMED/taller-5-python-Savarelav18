@@ -5,35 +5,28 @@ class Anfibio(Animal):
     ranas=0
     salamandras=0
     _listado=[]
-    def __init__(self,nombre,edad,habitat,genero,zona,colorPiel,venenoso):
-        super.__init__(nombre,edad,habitat,genero,zona)
+    def __init__(self,nombre,edad,habitat,genero,colorPiel,venenoso):
+        super.__init__(nombre,edad,habitat,genero)
         self._colorPiel=colorPiel
         self._venenoso=venenoso
         Anfibio._listado.append(self)
     
     @classmethod
     def cantidadAnfibios(cls):
-        if cls._listado !=None:
             return len(cls._listado)
-        else:
-            return 0
     
     def movimiento():
         return "saltar"
     
     @classmethod
-    def crearRana(cls,nombre,edad,genero,zona):
-        rana=cls(nombre,edad,"selva",genero,zona,"rojo",True)
-        cls._listado.append(rana)
+    def crearRana(cls,nombre,edad,genero):
         cls.ranas+=1
-        return rana
+        return cls(nombre,edad,"selva",genero,"rojo",True)
 
     @classmethod
-    def crearSalamandra(cls,nombre,edad,genero,zona):
-        salamandra=cls(nombre,edad,"selva",genero,zona,"negro y amarillo",False)
-        cls._listado.append(salamandra)
+    def crearSalamandra(cls,nombre,edad,genero):
         cls.ranas+=1
-        return salamandra
+        return cls(nombre,edad,"selva",genero,"negro y amarillo",False)
     
 
     #getters and setters methods

@@ -12,7 +12,7 @@ class Animal:
     def movimiento():
         return "desplazarse"
     @classmethod
-    def totalPorTipo():
+    def totalPorTipo(cls):
         from zooAnimales.mamifero import Mamifero
         from zooAnimales.ave import Ave
         from zooAnimales.reptil import Reptil
